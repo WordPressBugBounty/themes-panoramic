@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.70' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.71' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -562,16 +562,18 @@ add_action( 'woocommerce_before_shop_loop_item_title', function() {
 }, 11 );
 
 // Set the number or products per page
-function panoramic_loop_shop_per_page( $cols ) {
-	// $cols contains the current number of products per page based on the value stored on Options -> Reading
-	// Return the number of products you wanna show per page.
-	$cols = get_theme_mod( 'panoramic-woocommerce-products-per-page' );
-	
-	return $cols;
+if ( ! function_exists( 'panoramic_loop_shop_per_page' ) ) {
+	function panoramic_loop_shop_per_page( $cols ) {
+		// $cols contains the current number of products per page based on the value stored on Options -> Reading
+		// Return the number of products you wanna show per page.
+		$cols = get_theme_mod( 'panoramic-woocommerce-products-per-page' );
+		
+		return $cols;
+	}
 }
 add_filter( 'loop_shop_per_page', 'panoramic_loop_shop_per_page', 20 );
 
-if (!function_exists('panoramic_woocommerce_product_thumbnails_columns')) {
+if ( ! function_exists( 'panoramic_woocommerce_product_thumbnails_columns' ) ) {
 	function panoramic_woocommerce_product_thumbnails_columns() {
 		return 3;
 	}
@@ -583,41 +585,16 @@ add_filter ( 'woocommerce_product_thumbnails_columns', 'panoramic_woocommerce_pr
  */
 // Display an Out of Stock label on out of stock products
 add_action( 'woocommerce_after_shop_loop_item_title', 'panoramic_out_of_stock_notice', 10 );
-function panoramic_out_of_stock_notice() {
-    global $product;
-    if ( !$product->is_in_stock() ) {
-		echo '<p class="stock out-of-stock">';
-		echo __( 'Out of Stock', 'panoramic' );
-		echo '</p>';
-    }
-}
-
-/*
-if (!function_exists('woocommerce_template_loop_add_to_cart')) {
-	function woocommerce_template_loop_add_to_cart( $args = array() ) {
-		global $product;
-
-		if (!$product->is_in_stock()) {
+if ( ! function_exists( 'panoramic_out_of_stock_notice' ) ) {
+	function panoramic_out_of_stock_notice() {
+	    global $product;
+	    if ( !$product->is_in_stock() ) {
 			echo '<p class="stock out-of-stock">';
 			echo __( 'Out of Stock', 'panoramic' );
 			echo '</p>';
-		} else {
-			$defaults = array(
-				'quantity' => 1,
-				'class' => implode( ' ', array_filter( array(
-				'button',
-				'product_type_' . $product->get_type(),
-				$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-				$product->supports( 'ajax_add_to_cart' ) ? 'ajax_add_to_cart' : ''
-				) ) )
-			);
-			
-			$args = apply_filters( 'woocommerce_loop_add_to_cart_args', wp_parse_args( $args, $defaults ), $product );
-			wc_get_template( 'loop/add-to-cart.php', $args );
-		}
+	    }
 	}
 }
-*/
 
 function panoramic_excerpt_length( $length ) {
 	if ( is_admin() || ( !is_home() && !is_category() && !is_tag() && !is_search() ) ) {

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: panoramic\n"
-"POT-Creation-Date: 2024-09-29 11:57+0200\n"
+"POT-Creation-Date: 2024-11-20 20:38+0200\n"
 "PO-Revision-Date: 2016-11-05 23:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: Out the Box\n"
@@ -162,7 +162,7 @@ msgstr ""
 msgid "BBPress"
 msgstr ""
 
-#: customizer/customizer-options.php:124 functions.php:773
+#: customizer/customizer-options.php:124 functions.php:750
 msgid "BookingPress"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgid ""
 "around body text."
 msgstr ""
 
-#: customizer/customizer-options.php:394 functions.php:778
+#: customizer/customizer-options.php:394 functions.php:755
 msgid "WooCommerce"
 msgstr ""
 
@@ -482,7 +482,7 @@ msgstr ""
 msgid "Read More Text"
 msgstr ""
 
-#: customizer/customizer-options.php:677 functions.php:753
+#: customizer/customizer-options.php:677 functions.php:730
 msgid "Recent Posts Widget Extended"
 msgstr ""
 
@@ -545,31 +545,31 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: functions.php:590
+#: functions.php:593
 msgid "Out of Stock"
 msgstr ""
 
-#: functions.php:738
+#: functions.php:715
 msgid "Elementor"
 msgstr ""
 
-#: functions.php:743
+#: functions.php:720
 msgid "You can quote me on that"
 msgstr ""
 
-#: functions.php:748
+#: functions.php:725
 msgid "SiteOrigin Widgets Bundle"
 msgstr ""
 
-#: functions.php:758
+#: functions.php:735
 msgid "Beam me up Scotty"
 msgstr ""
 
-#: functions.php:763
+#: functions.php:740
 msgid "WPForms"
 msgstr ""
 
-#: functions.php:768
+#: functions.php:745
 msgid "Breadcrumb NavXT"
 msgstr ""
 

@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.74' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.75' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -717,11 +717,6 @@ function panoramic_register_required_plugins() {
 			'required'  => false
 		),
 		array(
-			'name'      => __( 'You can quote me on that', 'panoramic' ),
-			'slug'      => 'you-can-quote-me-on-that',
-			'required'  => false
-		),
-		array(
 			'name'      => __( 'SiteOrigin Widgets Bundle', 'panoramic' ),
 			'slug'      => 'so-widgets-bundle',
 			'required'  => false
@@ -744,11 +739,6 @@ function panoramic_register_required_plugins() {
 		array(
 			'name'      => __( 'Breadcrumb NavXT', 'panoramic' ),
 			'slug'      => 'breadcrumb-navxt',
-			'required'  => false
-		),
-		array(
-			'name'      => __( 'BookingPress', 'panoramic' ),
-			'slug'      => 'bookingpress-appointment-booking',
 			'required'  => false
 		),
 		array(

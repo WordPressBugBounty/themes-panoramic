@@ -96,6 +96,9 @@ View the theme settings under "Appearance" -> Customize.
 
 == Changelog ==
 
+#### 1.1.75
+* Tweak: Revised the recommended plugins list
+
 #### 1.1.74
 * Updated the translation file
 

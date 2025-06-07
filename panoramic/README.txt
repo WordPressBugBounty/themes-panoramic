@@ -96,6 +96,9 @@ View the theme settings under "Appearance" -> Customize.
 
 == Changelog ==
 
+#### 1.1.77
+* Improved translation support
+
 #### 1.1.76
 * Compatibility update
 

@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.76' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.77' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -197,7 +197,13 @@ function panoramic_review_notice() {
 	
 	if ( !get_user_meta( $user_id, 'panoramic_review_notice_dismissed' ) ) {
 		$class = 'notice notice-success is-dismissible';
-		printf( '<div class="%1$s"><p>%2$s</p><p><a href="?panoramic-review-notice-dismissed">Dismiss this notice</a></p></div>', esc_attr( $class ), $message );
+		
+		printf(
+			'<div class="%1$s"><p>%2$s</p><p><a href="?panoramic-review-notice-dismissed">%3$s</a></p></div>',
+			esc_attr( $class ),
+			$message,
+			__( 'Dismiss this notice', 'panoramic' )
+		);
 	}
 }
 $today = new DateTime( date( 'Y-m-d' ) );
@@ -227,7 +233,17 @@ function panoramic_admin_notice() {
 	
 	if ( !empty( $message['text'] ) && !get_user_meta( $user_id, 'panoramic_admin_notice_' .$message['id']. '_dismissed' ) ) {
 		$class = 'notice otb-notice red notice-success is-dismissible';
-		printf( '<div class="%1$s"><img src="https://www.outtheboxthemes.com/wp-content/uploads/2020/12/logo-red.png" class="logo" /><h3>%2$s</h3><p>%3$s</p><p style="margin:0;"><a class="button button-primary" href="%4$s" target="_blank">Read More</a> <a class="button button-dismiss" href="?panoramic-admin-notice-dismissed&panoramic-admin-notice-id=%5$s">Dismiss</a></p></div>', esc_attr( $class ), $message['heading'], $message['text'], $message['link'], $message['id'] );
+
+		printf(
+			'<div class="%1$s"><img src="https://www.outtheboxthemes.com/wp-content/uploads/2020/12/logo-red.png" class="logo" /><h3>%2$s</h3><p>%3$s</p><p style="margin:0;"><a class="button button-primary" href="%4$s" target="_blank">%6$s</a> <a class="button button-dismiss" href="?panoramic-admin-notice-dismissed&panoramic-admin-notice-id=%5$s">%7$s</a></p></div>',
+			esc_attr( $class ),
+			$message['heading'],
+			$message['text'],
+			$message['link'],
+			$message['id'],
+			__( 'Read More', 'panoramic' ),
+			__( 'Dismiss', 'panoramic' )
+		);
 	}
 }
 

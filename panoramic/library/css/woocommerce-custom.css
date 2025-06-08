@@ -510,9 +510,10 @@ p.woocommerce-store-notice.demo_store {
 }
 
 .woocommerce ul.products li.product a,
-.woocommerce-page ul.products li.product {
+.woocommerce-page ul.products li.product,
+.woocommerce ul.products li.product a.woocommerce-loop-product__link {
 	display: inline-block;
-	position: relative;
+    position: relative;
 }
 
 .woocommerce nav.woocommerce-pagination ul li a,

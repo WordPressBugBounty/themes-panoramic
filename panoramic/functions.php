@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.78' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.79' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -310,7 +310,11 @@ function panoramic_theme_scripts() {
 	if ( panoramic_is_woocommerce_activated() ) {	
     	wp_enqueue_style( 'panoramic-woocommerce-custom', get_template_directory_uri().'/library/css/woocommerce-custom.css', array(), PANORAMIC_THEME_VERSION );
 	}
-
+	
+	if ( class_exists( 'Wp_Travel_Engine' ) ) {
+		wp_enqueue_style( 'panoramic-wp-travel-engine', get_template_directory_uri().'/library/css/wp-travel-engine.css', array(), PANORAMIC_THEME_VERSION );
+	}
+	
 	wp_enqueue_script( 'panoramic-navigation', get_template_directory_uri() . '/library/js/navigation.js', array(), PANORAMIC_THEME_VERSION, true );
 	wp_enqueue_script( 'panoramic-caroufredsel', get_template_directory_uri() . '/library/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery'), PANORAMIC_THEME_VERSION, true );
 	wp_enqueue_script( 'panoramic-touchswipe', get_template_directory_uri() . '/library/js/jquery.touchSwipe.min.js', array('jquery'), PANORAMIC_THEME_VERSION, true );

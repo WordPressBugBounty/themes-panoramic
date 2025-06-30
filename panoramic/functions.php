@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.79' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.80' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -131,6 +131,9 @@ function panoramic_theme_setup() {
 }
 endif; // panoramic_theme_setup
 add_action( 'after_setup_theme', 'panoramic_theme_setup' );
+
+// Unhide modern markup setting in admin
+add_filter( 'wpforms_admin_settings_modern_markup_register_field_is_hidden', '__return_false' );
 
 if ( ! function_exists( 'panoramic_fonts_url' ) ) :
 	/**

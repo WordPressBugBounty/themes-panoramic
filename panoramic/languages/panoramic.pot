@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: panoramic\n"
-"POT-Creation-Date: 2025-06-23 10:05+0200\n"
+"POT-Creation-Date: 2025-06-30 20:28+0200\n"
 "PO-Revision-Date: 2016-11-05 23:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: Out the Box\n"
@@ -346,7 +346,7 @@ msgid ""
 "around body text."
 msgstr ""
 
-#: customizer/customizer-options.php:394 functions.php:765
+#: customizer/customizer-options.php:394 functions.php:768
 msgid "WooCommerce"
 msgstr ""
 
@@ -482,7 +482,7 @@ msgstr ""
 msgid "Read More Text"
 msgstr ""
 
-#: customizer/customizer-options.php:677 functions.php:745
+#: customizer/customizer-options.php:677 functions.php:748
 msgid "Recent Posts Widget Extended"
 msgstr ""
 
@@ -537,47 +537,47 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:205 library/includes/class-tgm-plugin-activation.php:408
+#: functions.php:208 library/includes/class-tgm-plugin-activation.php:408
 msgid "Dismiss this notice"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:247
 msgid "Read More"
 msgstr ""
 
-#: functions.php:245
+#: functions.php:248
 msgid "Dismiss"
 msgstr ""
 
-#: functions.php:270
+#: functions.php:273
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:280
+#: functions.php:283
 msgid "Footer"
 msgstr ""
 
-#: functions.php:613
+#: functions.php:616
 msgid "Out of Stock"
 msgstr ""
 
-#: functions.php:735
+#: functions.php:738
 msgid "Elementor"
 msgstr ""
 
-#: functions.php:740
+#: functions.php:743
 msgid "SiteOrigin Widgets Bundle"
 msgstr ""
 
-#: functions.php:750
+#: functions.php:753
 msgid "Beam me up Scotty"
 msgstr ""
 
-#: functions.php:755
+#: functions.php:758
 msgid "WPForms"
 msgstr ""
 
-#: functions.php:760
+#: functions.php:763
 msgid "Breadcrumb NavXT"
 msgstr ""
 

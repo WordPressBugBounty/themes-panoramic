@@ -96,6 +96,9 @@ View the theme settings under "Appearance" -> Customize.
 
 == Changelog ==
 
+#### 1.1.80
+* New: Added support for switching between Classic and Modern markup in WPForms
+
 #### 1.1.79
 * New: Added styling for the WP Travel Engine plugin
 

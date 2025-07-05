@@ -96,6 +96,9 @@ View the theme settings under "Appearance" -> Customize.
 
 == Changelog ==
 
+#### 1.1.81
+* New: Added default styling for the Elementor Image Box widget
+
 #### 1.1.80
 * New: Added support for switching between Classic and Modern markup in WPForms
 

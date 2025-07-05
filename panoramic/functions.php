@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.80' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.81' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**

@@ -540,6 +540,7 @@ function panoramic_customizer_library_build_styles() {
 				.panoramic-page-builders-use-theme-styles .elementor-widget-heading .elementor-heading-title,
 				.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title,
 				.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title a,
+    			.panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-title,
     			html #jp-relatedposts h3.jp-relatedposts-headline,
 				html #infinite-handle span button,
 				html #infinite-handle span button:hover,
@@ -577,7 +578,8 @@ function panoramic_customizer_library_build_styles() {
 				.site-footer-widgets ul li h2.widgettitle,
     			.site-footer-widgets ul li .wp-block-heading,
     			.panoramic-page-builders-use-theme-styles .elementor-widget-heading .elementor-heading-title,
-				.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title'
+				.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title,
+    			.panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-title'
     		),
     		'declarations' => array(
     			'color' => $sanfontcolor
@@ -625,6 +627,7 @@ function panoramic_customizer_library_build_styles() {
 				.panoramic-slider-container.default .slider .slide .overlay .opacity p,
 	            .panoramic-page-builders-use-theme-styles .elementor-widget-text-editor,
 				.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description,
+	            .panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-description,
 	            
 				.panoramic-bookingpress-use-theme-styles .bpa-front-tabs .bpa-front-module--service-item .bpa-front-si-card .bpa-front-si__card-body .bpa-front-si__card-body--heading,
 				.panoramic-bookingpress-use-theme-styles .bpa-front-tabs .bpa-front-module-heading,
@@ -763,7 +766,8 @@ function panoramic_customizer_library_build_styles() {
                 .widget-area .wp-block-heading,
                 .panoramic-page-builders-use-theme-styles .testimonials .sow-slider-base ul.sow-slider-images .sow-slider-image-wrapper p,
                	.panoramic-page-builders-use-theme-styles .elementor-widget-text-editor,
-				.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description'
+				.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description,
+                .panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-description'
             ),
             'declarations' => array(
                 'color' => $sanfontcolor

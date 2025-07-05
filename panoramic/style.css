@@ -4,7 +4,7 @@ Theme URI: https://www.outtheboxthemes.com/wordpress-themes/panoramic/
 Author: Out the Box
 Author URI: https://www.outtheboxthemes.com/
 Description: Perfect for just about anything. Panoramic is a well designed, fully responsive theme with a homepage slider that's easy to customize and offers 5 star support. The subtle design features give it a premium feel and the wide range of flexible theme options help you create a variety of sites from a simple blog to a fully functional online eCommerce store. Used in conjunction with SiteOrigin's drag and drop Page Builder plugin, you can easily build beautiful page layouts with no coding knowledge to create any website from travel to business to food, decor, lifestyle, sport and more. Panoramic integrates seamlessly with the following popular free plugins: SiteOrigin's Page Builder, WPForms and WooCommerce.
-Version: 1.1.80
+Version: 1.1.81
 Tested up to: 6.8
 Requires at least: 4.7
 Requires PHP: 5.3
@@ -4034,6 +4034,7 @@ a.button,
 .panoramic-page-builders-use-theme-styles .elementor-widget-heading .elementor-heading-title,
 .panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title,
 .panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title a,
+.panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-title,
 html #jp-relatedposts h3.jp-relatedposts-headline,
 html #infinite-handle span button,
 html #infinite-handle span button:hover,
@@ -4054,7 +4055,8 @@ ul.product_list_widget li .product-title,
 html #jp-relatedposts h3.jp-relatedposts-headline em,
 .panoramic-page-builders-use-theme-styles .elementor-widget-heading .elementor-heading-title,
 .panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title,
-.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title a {
+.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title a,
+.panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-title {
 	font-weight: 400;
 }
 
@@ -4067,7 +4069,8 @@ ul.product_list_widget li .product-title,
 html #jp-relatedposts h3.jp-relatedposts-headline,
 ul.product_list_widget li a:hover .product-title,
 .panoramic-page-builders-use-theme-styles .elementor-widget-heading .elementor-heading-title,
-.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title {
+.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-title,
+.panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-title {
     color: #006489;
 }
 
@@ -4102,7 +4105,8 @@ textarea,
 .header-image .overlay .opacity p,
 .panoramic-slider-container.default .slider .slide .overlay .opacity,
 .panoramic-page-builders-use-theme-styles .elementor-widget-text-editor,
-.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description {
+.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description,
+.panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-description {
     font-family: 'Lato', sans-serif;
 }
 
@@ -4135,7 +4139,8 @@ body,
 .widget-area .wp-block-heading,
 .panoramic-page-builders-use-theme-styles .testimonials .sow-slider-base ul.sow-slider-images .sow-slider-image-wrapper p,
 .panoramic-page-builders-use-theme-styles .elementor-widget-text-editor,
-.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description {
+.panoramic-page-builders-use-theme-styles .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description,
+.panoramic-page-builders-use-theme-styles .elementor-widget-image-box .elementor-image-box-description {
     color: #58585a;
 }
 

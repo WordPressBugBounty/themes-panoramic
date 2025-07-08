@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.81' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.82' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -305,7 +305,7 @@ function panoramic_theme_scripts() {
     } else if ( get_theme_mod( 'panoramic-font-awesome-version', customizer_library_get_default( 'panoramic-font-awesome-version' ) ) == '5.5.0' ) {
     	wp_enqueue_style( 'otb-font-awesome', '//use.fontawesome.com/releases/v5.5.0/css/all.css', array(), '5.5.0' );
     } else {
-    	wp_enqueue_style( 'otb-font-awesome', '//use.fontawesome.com/releases/v6.5.1/css/all.css', array(), '6.5.1' );
+    	wp_enqueue_style( 'otb-font-awesome', '//use.fontawesome.com/releases/v6.7.2/css/all.css', array(), '6.7.2' );
     }
     
 	wp_enqueue_style( 'panoramic-style', get_stylesheet_uri(), array(), PANORAMIC_THEME_VERSION );

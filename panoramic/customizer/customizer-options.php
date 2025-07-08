@@ -610,7 +610,7 @@ function panoramic_customizer_library_options() {
      
     $choices = array(
     	'4.7.0' => '4.7.0',
-    	'latest' => 'Latest (6.5.1)'
+    	'latest' => 'Latest (6.7.2)'
     );
     $options['panoramic-font-awesome-version'] = array(
     	'id' => 'panoramic-font-awesome-version',

@@ -50,4 +50,4 @@ if ( ( $page_template == 'template-left-sidebar.php' && !is_active_sidebar( 'sid
 ?>
 
 <div id="content" class="site-content site-container <?php echo esc_attr( ( $no_sidebar ) ? 'no-sidebar' : '' ); ?>">
-	<a name="site-content"></a>
+	<a id="site-content" name="site-content" tabindex="-1"></a>

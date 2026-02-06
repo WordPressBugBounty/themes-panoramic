@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.82' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.88' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -223,45 +223,247 @@ function panoramic_review_notice_dismissed() {
 }
 add_action( 'admin_init', 'panoramic_review_notice_dismissed' );
 
-function panoramic_admin_notice() {
+/**
+ * Get today's date in site timezone.
+ */
+function panoramic_today_ymd() {
+    return date( 'Y-m-d', current_time( 'timestamp' ) );
+}
+
+/**
+ * Get Black Friday (4th Friday of November) and Cyber Monday for the current year.
+ *
+ * @return array {
+ *   'start'        => 'Y-m-d', // Black Friday
+ *   'end'          => 'Y-m-d', // Cyber Monday
+ *   'year'         => 'YYYY',
+ *   'black_friday' => 'Y-m-d',
+ *   'cyber_monday' => 'Y-m-d',
+ * }
+ */
+function panoramic_get_black_friday_window() {
+    $ts    = current_time( 'timestamp' );
+    $year  = (int) date( 'Y', $ts );
+    $month = 11;
+
+    $friday_count    = 0;
+    $black_friday_ts = null;
+
+    // Find 4th Friday in November.
+    for ( $day = 1; $day <= 30; $day++ ) {
+        $day_ts = mktime( 0, 0, 0, $month, $day, $year );
+        if ( date( 'N', $day_ts ) === '5' ) { // 5 = Friday
+            $friday_count++;
+            if ( 4 === $friday_count ) {
+                $black_friday_ts = $day_ts;
+                break;
+            }
+        }
+    }
+
+    if ( ! $black_friday_ts ) {
+        // Fallback: last Friday of November.
+        $black_friday_ts = strtotime( 'last friday of november ' . $year, $ts );
+    }
+
+    // Cyber Monday = Monday after Black Friday (3 days later).
+    $cyber_monday_ts = strtotime( '+3 days', $black_friday_ts );
+
+    $black_friday  = date( 'Y-m-d', $black_friday_ts );
+    $cyber_monday  = date( 'Y-m-d', $cyber_monday_ts );
+
+    return array(
+        'start'        => $black_friday,
+        'end'          => $cyber_monday,
+        'year'         => $year,
+        'black_friday' => $black_friday,
+        'cyber_monday' => $cyber_monday,
+    );
+}
+
+
+/**
+ * Show Black Friday (Fri–Sun) admin notice.
+ */
+function panoramic_black_friday_notice() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	$window = panoramic_get_black_friday_window();
+	$today  = panoramic_today_ymd();
+	//$today = $window['black_friday']; // should show BF notice
+
+	// Show ONLY from Black Friday up to the day BEFORE Cyber Monday.
+	// i.e. Friday, Saturday, Sunday.
+	if ( $today < $window['black_friday'] || $today >= $window['cyber_monday'] ) {
+		return;
+	}
+
 	$user_id = get_current_user_id();
-	
-	$message = array (
-		'id' => 21,
-		'heading' => 'Christmas Sale',
-		//'text' => '<a href="https://www.outtheboxthemes.com/go/theme-notification-black-friday-2024-wordpress-themes/">Get 40% off any of our Premium WordPress themes this Black Friday!</a>',
-		'text' => '<a href="https://www.outtheboxthemes.com/go/theme-notification-christmas-day-2024-wordpress-themes/" target="_blank"><span style="font-size: 20px">🎄</span>Get 20% off any of our Premium WordPress themes until Christmas Day!<span style="font-size: 20px">🎄</span></a>',
-		'link' => 'https://www.outtheboxthemes.com/go/theme-notification-christmas-day-2024-wordpress-themes/'
+
+	// Per-year ID so it can reappear each year.
+	$message = array(
+		'id'      => 'black_friday_' . $window['year'],
+		'heading' => __( 'Black Friday Weekend Sale', 'panoramic' ),
+		'text'    => sprintf(
+			__( '<a href="%1$s" target="_blank"><span style="font-size: 20px">🖤</span>Get 40%% off any of our Premium WordPress themes this Black Friday weekend!<span style="font-size: 20px">🖤</span></a>', 'panoramic' ),
+			'https://www.outtheboxthemes.com/go/theme-notification-black-friday-2025-wordpress-themes/'
+		),
+		'link'    => 'https://www.outtheboxthemes.com/go/theme-notification-black-friday-2025-wordpress-themes/',
 	);
-	
-	if ( !empty( $message['text'] ) && !get_user_meta( $user_id, 'panoramic_admin_notice_' .$message['id']. '_dismissed' ) ) {
-		$class = 'notice otb-notice red notice-success is-dismissible';
 
-		printf(
-			'<div class="%1$s"><img src="https://www.outtheboxthemes.com/wp-content/uploads/2020/12/logo-red.png" class="logo" /><h3>%2$s</h3><p>%3$s</p><p style="margin:0;"><a class="button button-primary" href="%4$s" target="_blank">%6$s</a> <a class="button button-dismiss" href="?panoramic-admin-notice-dismissed&panoramic-admin-notice-id=%5$s">%7$s</a></p></div>',
-			esc_attr( $class ),
-			$message['heading'],
-			$message['text'],
-			$message['link'],
-			$message['id'],
-			__( 'Read More', 'panoramic' ),
-			__( 'Dismiss', 'panoramic' )
-		);
+	// Dismiss check (string ID).
+	if ( ! empty( $message['text'] ) && get_user_meta( $user_id, 'panoramic_admin_notice_' . $message['id'] . '_dismissed', true ) ) {
+		return;
 	}
-}
 
-if ( date('Y-m-d') >= '2024-11-29' && date('Y-m-d') <= '2024-12-25' ) {
-	add_action( 'admin_notices', 'panoramic_admin_notice' );
-}
+	$class = 'notice otb-notice notice-success is-dismissible';
 
-function panoramic_admin_notice_dismissed() {
-    $user_id = get_current_user_id();
-    if ( isset( $_GET['panoramic-admin-notice-dismissed'] ) ) {
-    	$panoramic_admin_notice_id = $_GET['panoramic-admin-notice-id'];
-		add_user_meta( $user_id, 'panoramic_admin_notice_' .$panoramic_admin_notice_id. '_dismissed', 'true', true );
+	// Safer dismiss URL with nonce.
+	$dismiss_url = wp_nonce_url(
+		add_query_arg(
+			array(
+				'panoramic-admin-notice-dismissed' => '1',
+				'panoramic-admin-notice-id'        => $message['id'],
+			)
+		),
+		'panoramic_dismiss_notice_' . $message['id']
+	);
+
+	printf(
+		'<div class="%1$s"><img src="%2$s" class="logo" /><h3>%3$s</h3><p>%4$s</p><p style="margin:0;"><a class="button button-primary" href="%5$s" target="_blank" rel="noopener noreferrer">%6$s</a> <a class="button button-dismiss" href="%7$s">%8$s</a></p></div>',
+		esc_attr( $class ),
+		esc_url( 'https://www.outtheboxthemes.com/wp-content/uploads/2025/11/logo-charcoal@2x.webp' ),
+		esc_html( $message['heading'] ),
+		$message['text'],
+		esc_url( $message['link'] ),
+		esc_html__( 'Read More', 'panoramic' ),
+		esc_url( $dismiss_url ),
+		esc_html__( 'Dismiss', 'panoramic' )
+	);
+}
+add_action( 'admin_notices', 'panoramic_black_friday_notice' );
+
+/**
+ * Show Cyber Monday–only admin notice.
+ */
+function panoramic_cyber_monday_notice() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
 	}
+
+	$window = panoramic_get_black_friday_window();
+	$today  = panoramic_today_ymd();
+	//$today = $window['cyber_monday']; // BF notice should NOT show
+
+	// Only show ON Cyber Monday.
+	if ( $today !== $window['cyber_monday'] ) {
+		return;
+	}
+
+	$user_id = get_current_user_id();
+
+	$message = array(
+		'id'      => 'cyber_monday_' . $window['year'],
+		'heading' => __( 'Cyber Monday Sale', 'panoramic' ),
+		'text'    => sprintf(
+			__( '<a href="%1$s" target="_blank"><i class="fas fa-terminal"></i>Cyber Monday specials activated… <span class="otb-cursor" aria-hidden="true"></span></a>', 'panoramic' ),
+			'https://www.outtheboxthemes.com/go/theme-notification-cyber-monday-2025-wordpress-themes/'
+		),
+		'link'    => 'https://www.outtheboxthemes.com/go/theme-notification-cyber-monday-2025-wordpress-themes/',
+	);
+
+	// Different ID → even if they dismissed BF, this can still show.
+	if ( ! empty( $message['text'] ) && get_user_meta( $user_id, 'panoramic_admin_notice_' . $message['id'] . '_dismissed', true ) ) {
+		return;
+	}
+
+	$class = 'notice otb-notice matrix notice-success is-dismissible';
+
+	$dismiss_url = wp_nonce_url(
+		add_query_arg(
+			array(
+				'panoramic-admin-notice-dismissed' => '1',
+				'panoramic-admin-notice-id'        => $message['id'],
+			)
+		),
+		'panoramic_dismiss_notice_' . $message['id']
+	);
+
+	printf(
+		'<div class="%1$s"><img src="%2$s" class="logo" /><h3>%3$s</h3><p>%4$s</p><p style="margin:0;"><a class="button button-primary" href="%5$s" target="_blank" rel="noopener noreferrer">%6$s</a> <a class="button button-dismiss" href="%7$s">%8$s</a></p></div>',
+		esc_attr( $class ),
+		esc_url( 'https://www.outtheboxthemes.com/wp-content/uploads/2025/11/logo-matrix@2x.webp' ),
+		esc_html( $message['heading'] ),
+		$message['text'],
+		esc_url( $message['link'] ),
+		esc_html__( 'Read More', 'panoramic' ),
+		esc_url( $dismiss_url ),
+		esc_html__( 'Dismiss', 'panoramic' )
+	);
 }
-add_action( 'admin_init', 'panoramic_admin_notice_dismissed' );
+add_action( 'admin_notices', 'panoramic_cyber_monday_notice' );
+
+function panoramic_christmas_notice() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	$ts    = current_time( 'timestamp' );
+	$year  = (string) date( 'Y', $ts );
+	$today = panoramic_today_ymd();
+	//$today = '2025-12-10'; // any date between 2025-12-01 and 2025-12-25
+
+	$start = $year . '-12-01';
+	$end   = $year . '-12-25';
+
+	// Only show 1–25 December (inclusive).
+	if ( $today < $start || $today > $end ) {
+		return;
+	}
+
+	$user_id = get_current_user_id();
+
+	$message = array(
+		'id'      => 'christmas_' . $year,
+		'heading' => __( 'Christmas Sale', 'panoramic' ),
+		'text'    => sprintf(
+			__( '<a href="%1$s" target="_blank"><span style="font-size: 20px">🎄</span>Get 20%% off any of our Premium WordPress themes until Christmas Day!<span style="font-size: 20px">🎄</span></a>', 'panoramic' ),
+			'https://www.outtheboxthemes.com/go/theme-notification-christmas-day-2025-wordpress-themes/'
+		),
+		'link'    => 'https://www.outtheboxthemes.com/go/theme-notification-christmas-day-2025-wordpress-themes/',
+	);
+
+	if ( ! empty( $message['text'] ) && get_user_meta( $user_id, 'panoramic_admin_notice_' . $message['id'] . '_dismissed', true ) ) {
+		return;
+	}
+
+	$class = 'notice otb-notice red notice-success is-dismissible';
+
+	$dismiss_url = wp_nonce_url(
+		add_query_arg(
+			array(
+				'panoramic-admin-notice-dismissed' => '1',
+				'panoramic-admin-notice-id'        => $message['id'],
+			)
+		),
+		'panoramic_dismiss_notice_' . $message['id']
+	);
+
+	printf(
+		'<div class="%1$s"><img src="%2$s" class="logo" /><h3>%3$s</h3><p>%4$s</p><p style="margin:0;"><a class="button button-primary" href="%5$s" target="_blank" rel="noopener noreferrer">%6$s</a> <a class="button button-dismiss" href="%7$s">%8$s</a></p></div>',
+		esc_attr( $class ),
+		esc_url( 'https://www.outtheboxthemes.com/wp-content/uploads/2025/11/logo-red@2x.webp' ),
+		esc_html( $message['heading'] ),
+		$message['text'],
+		esc_url( $message['link'] ),
+		esc_html__( 'Read More', 'panoramic' ),
+		esc_url( $dismiss_url ),
+		esc_html__( 'Dismiss', 'panoramic' )
+	);
+}
+add_action( 'admin_notices', 'panoramic_christmas_notice' );
 
 /**
  * Register widget area.
@@ -506,6 +708,10 @@ function panoramic_add_body_class( $classes ) {
 	
 	if ( get_theme_mod( 'panoramic-media-crisp-images', customizer_library_get_default( 'panoramic-media-crisp-images' ) ) ) {
 		$classes[] = 'crisp-images';
+	}
+
+	if ( !get_theme_mod( 'panoramic-show-recaptcha-badge', customizer_library_get_default( 'panoramic-show-recaptcha-badge' ) ) ) {
+		$classes[] = 'hide-recaptcha-badge';
 	}
 	
 	if ( get_theme_mod( 'panoramic-content-links-have-underlines', customizer_library_get_default( 'panoramic-content-links-have-underlines' ) ) ) {

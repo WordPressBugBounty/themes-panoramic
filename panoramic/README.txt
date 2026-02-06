@@ -2,7 +2,7 @@
 Contributors: Out the Box
 Donate link: 
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready, wide-blocks, blog, e-commerce
-Tested up to: 6.8
+Tested up to: 6.9
 Requires at least: 4.7
 Requires PHP: 5.3
 Stable tag: 3.7
@@ -11,11 +11,13 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Perfect for just about anything. Panoramic is a well designed, fully responsive WordPress theme with a homepage slider that's easy to customize and offers 5 star support. The subtle design features give it a premium feel and the wide range of flexible theme options help you create a variety of sites from a simple blog to a fully functional online eCommerce store. Used in conjunction with SiteOrigin's drag and drop Page Builder plugin, you can easily build beautiful page layouts with no coding knowledge to create any website from travel to business to food, decor, lifestyle, sport and more. Panoramic integrates seamlessly with the following popular free plugins: SiteOrigin's Page Builder, WPForms and WooCommerce.
+Panoramic is a clean, minimalist and fully responsive multipurpose WordPress theme. It provides a flexible and modern foundation for business sites, portfolios, blogs and online stores.
+
+Panoramic integrates seamlessly with Elementor, WPForms and WooCommerce, and includes a simple homepage slider and intuitive theme options for easy customization.
 
 == License ==
 
-Panoramic WordPress Theme, Copyright 2018 Out the Box.
+Panoramic WordPress Theme, Copyright 2025 Out the Box.
 Panoramic is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -95,6 +97,25 @@ View the theme settings under "Appearance" -> Customize.
 1. Featured Images work best at a minimum of 1100 wide and 420 high.
 
 == Changelog ==
+
+#### 1.1.88
+* Tweak: Improved slider image loading to reduce layout shift and improve page load performance
+
+#### 1.1.87
+* Tweak: Improved header image performance by optimizing loading, decoding and fetch priority
+
+#### 1.1.86
+* Tweak: Enhanced skip-to-content accessibility support for improved compatibility with accessibility plugins such as EqualWeb
+
+#### 1.1.85
+* WordPress 6.9 compatibility update
+
+#### 1.1.84
+* PREMIUM: Added Logo Width and Mobile Logo Width settings
+* Tweak: Improved code security by adding sanitization to URL parameters
+
+#### 1.1.83
+* New: Added a theme setting under Privacy & Legal to toggle the display of the reCAPTCHA badge
 
 #### 1.1.82
 * New: Updated the latest Font Awesome version to 6.7.2

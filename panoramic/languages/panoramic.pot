@@ -1,32 +1,56 @@
-#, fuzzy
+# Copyright (C) 2026 Out the Box
+# This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: panoramic\n"
-"POT-Creation-Date: 2025-07-09 00:37+0200\n"
-"PO-Revision-Date: 2016-11-05 23:26+0200\n"
-"Last-Translator: \n"
-"Language-Team: Out the Box\n"
-"Language: en_US\n"
+"Project-Id-Version: Panoramic 1.1.88\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/panoramic\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:2,1;__ngettext:1,2;"
-"__ngettext_noop:1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n_noop:1,2;"
-"_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_nx:4c,1,2\n"
-"X-Poedit-SearchPath-0: .\n"
+"POT-Creation-Date: 2026-01-29T18:23:30+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: panoramic\n"
 
-#: 404.php:14 customizer/customizer-options.php:708
+#. Theme Name of the theme
+#: style.css
+msgid "Panoramic"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://www.outtheboxthemes.com/wordpress-themes/panoramic/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Panoramic is a clean, minimalist and fully responsive multipurpose WordPress theme. Ideal for business, portfolio, blog and eCommerce websites, with seamless support for Elementor, WPForms and WooCommerce."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Out the Box"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://www.outtheboxthemes.com/"
+msgstr ""
+
+#: 404.php:14
+#: customizer/customizer-options.php:708
 msgid "404!"
 msgstr ""
 
-#: 404.php:19 customizer/customizer-options.php:715
+#: 404.php:19
+#: customizer/customizer-options.php:715
 msgid "The page you were looking for cannot be found!"
 msgstr ""
 
-#: 404.php:23 library/template-parts/content-none.php:28
+#: 404.php:23
+#: library/template-parts/content-none.php:28
 #: library/template-parts/content-none.php:38
 msgid "Back to Homepage"
 msgstr ""
@@ -39,15 +63,18 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:35 comments.php:49
+#: comments.php:35
+#: comments.php:49
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:50
+#: comments.php:36
+#: comments.php:50
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:51
+#: comments.php:37
+#: comments.php:51
 msgid "Newer Comments &rarr;"
 msgstr ""
 
@@ -199,8 +226,7 @@ msgid "Shop Links"
 msgstr ""
 
 #: customizer/customizer-options.php:190
-msgid ""
-"Display the My Account and Checkout links when WooCommerce is active."
+msgid "Display the My Account and Checkout links when WooCommerce is active."
 msgstr ""
 
 #: customizer/customizer-options.php:194
@@ -255,9 +281,7 @@ msgstr ""
 #: customizer/customizer-options.php:266
 #: library/template-parts/content-none.php:24
 #: library/template-parts/content-none.php:34
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with "
-"some different keywords."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
 #: customizer/customizer-options.php:275
@@ -273,17 +297,11 @@ msgid "Choose a Slider"
 msgstr ""
 
 #: customizer/customizer-options.php:308
-msgid ""
-"<a href=\"https://www.outtheboxthemes.com/documentation/panoramic/"
-"homepage-slider/default-slider/\" rel=\"nofollow\" target=\"_blank"
-"\">Read a guide on how to set up the Default Slider</a>"
+msgid "<a href=\"https://www.outtheboxthemes.com/documentation/panoramic/homepage-slider/default-slider/\" rel=\"nofollow\" target=\"_blank\">Read a guide on how to set up the Default Slider</a>"
 msgstr ""
 
 #: customizer/customizer-options.php:316
-msgid ""
-"<a href=\"https://www.outtheboxthemes.com/documentation/panoramic/"
-"homepage-slider/slider-plugin/\" rel=\"nofollow\" target=\"_blank"
-"\">Read a guide on using a slider plugin</a>"
+msgid "<a href=\"https://www.outtheboxthemes.com/documentation/panoramic/homepage-slider/slider-plugin/\" rel=\"nofollow\" target=\"_blank\">Read a guide on using a slider plugin</a>"
 msgstr ""
 
 #: customizer/customizer-options.php:321
@@ -291,11 +309,7 @@ msgid "Select Categories"
 msgstr ""
 
 #: customizer/customizer-options.php:324
-msgid ""
-"Select the categories of the posts you want to display in the slider. "
-"The featured image will be the slide image and the post content will "
-"display over it. Hold down the Ctrl (windows) / Command (Mac) button "
-"to select multiple categories."
+msgid "Select the categories of the posts you want to display in the slider. The featured image will be the slide image and the post content will display over it. Hold down the Ctrl (windows) / Command (Mac) button to select multiple categories."
 msgstr ""
 
 #: customizer/customizer-options.php:329
@@ -311,9 +325,7 @@ msgid "Slide Transition Speed"
 msgstr ""
 
 #: customizer/customizer-options.php:349
-msgid ""
-"The speed it takes to transition between slides in milliseconds. 1000 "
-"milliseconds equals 1 second."
+msgid "The speed it takes to transition between slides in milliseconds. 1000 milliseconds equals 1 second."
 msgstr ""
 
 #: customizer/customizer-options.php:354
@@ -329,11 +341,7 @@ msgid "Header Image"
 msgstr ""
 
 #: customizer/customizer-options.php:372
-msgid ""
-"Please note: The header image will not display on your site as the "
-"slider is currently enabled. To make the header image visible you will "
-"first need to disable the <a href=\"#panoramic-slider\" rel=\"tc-"
-"section\">slider</a>."
+msgid "Please note: The header image will not display on your site as the slider is currently enabled. To make the header image visible you will first need to disable the <a href=\"#panoramic-slider\" rel=\"tc-section\">slider</a>."
 msgstr ""
 
 #: customizer/customizer-options.php:380
@@ -341,12 +349,11 @@ msgid "Text"
 msgstr ""
 
 #: customizer/customizer-options.php:383
-msgid ""
-"Use <h1></h1> or <h2></h2> tags around heading text and <p></p> tags "
-"around body text."
+msgid "Use <h1></h1> or <h2></h2> tags around heading text and <p></p> tags around body text."
 msgstr ""
 
-#: customizer/customizer-options.php:394 functions.php:768
+#: customizer/customizer-options.php:394
+#: functions.php:974
 msgid "WooCommerce"
 msgstr ""
 
@@ -355,11 +362,7 @@ msgid "Auto Update Header Cart"
 msgstr ""
 
 #: customizer/customizer-options.php:411
-msgid ""
-"This will auto-update the header cart as products are added or "
-"removed. <strong>Please note:</strong> If you are running a "
-"multilingual site then you should disable this setting for the header "
-"cart translations to function correctly"
+msgid "This will auto-update the header cart as products are added or removed. <strong>Please note:</strong> If you are running a multilingual site then you should disable this setting for the header cart translations to function correctly"
 msgstr ""
 
 #: customizer/customizer-options.php:422
@@ -441,10 +444,7 @@ msgid "Form Field Font Color"
 msgstr ""
 
 #: customizer/customizer-options.php:598
-msgid ""
-"<a href=\"https://www.outtheboxthemes.com/documentation/panoramic/"
-"fonts/preview-page/\" rel=\"nofollow\" target=\"_blank\">Struggling to "
-"find the right font? Read more about our theme fonts preview tool</a>"
+msgid "<a href=\"https://www.outtheboxthemes.com/documentation/panoramic/fonts/preview-page/\" rel=\"nofollow\" target=\"_blank\">Struggling to find the right font? Read more about our theme fonts preview tool</a>"
 msgstr ""
 
 #: customizer/customizer-options.php:607
@@ -457,9 +457,7 @@ msgid "Version"
 msgstr ""
 
 #: customizer/customizer-options.php:622
-msgid ""
-"Select the version of Font Awesome that you would like to use. "
-"<strong>Icon variation will occur between the versions.</strong>"
+msgid "Select the version of Font Awesome that you would like to use. <strong>Icon variation will occur between the versions.</strong>"
 msgstr ""
 
 #: customizer/customizer-options.php:630
@@ -482,7 +480,8 @@ msgstr ""
 msgid "Read More Text"
 msgstr ""
 
-#: customizer/customizer-options.php:677 functions.php:748
+#: customizer/customizer-options.php:677
+#: functions.php:954
 msgid "Recent Posts Widget Extended"
 msgstr ""
 
@@ -503,25 +502,36 @@ msgid "Message"
 msgstr ""
 
 #: customizer/customizer-options.php:723
-msgid "Gutenberg"
+msgid "Privacy & Legal"
 msgstr ""
 
 #: customizer/customizer-options.php:729
+msgid "Show reCAPTCHA badge"
+msgstr ""
+
+#: customizer/customizer-options.php:733
+msgid "<p>Uncheck this only if you have added the required Google attribution text near your contact forms</p>"
+msgstr ""
+
+#. Template Name of the theme
+#: customizer/customizer-options.php:741
+msgid "Gutenberg"
+msgstr ""
+
+#: customizer/customizer-options.php:747
 msgid "Enable block-based widgets editor"
 msgstr ""
 
-#: customizer/customizer-options.php:740
+#: customizer/customizer-options.php:758
 msgid "Media"
 msgstr ""
 
-#: customizer/customizer-options.php:746
+#: customizer/customizer-options.php:764
 msgid "Crisp images"
 msgstr ""
 
-#: customizer/customizer-options.php:750
-msgid ""
-"<p>This will remove the default anti-aliasing done to scaled images by "
-"browsers creating a more crisp image.</p>"
+#: customizer/customizer-options.php:768
+msgid "<p>This will remove the default anti-aliasing done to scaled images by browsers creating a more crisp image.</p>"
 msgstr ""
 
 #: footer.php:34
@@ -537,47 +547,79 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:208 library/includes/class-tgm-plugin-activation.php:408
+#: functions.php:208
+#: library/includes/class-tgm-plugin-activation.php:408
 msgid "Dismiss this notice"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:308
+msgid "Black Friday Weekend Sale"
+msgstr ""
+
+#: functions.php:310
+#, php-format
+msgid "<a href=\"%1$s\" target=\"_blank\"><span style=\"font-size: 20px\">🖤</span>Get 40%% off any of our Premium WordPress themes this Black Friday weekend!<span style=\"font-size: 20px\">🖤</span></a>"
+msgstr ""
+
+#: functions.php:341
+#: functions.php:401
+#: functions.php:461
 msgid "Read More"
 msgstr ""
 
-#: functions.php:248
+#: functions.php:343
+#: functions.php:403
+#: functions.php:463
 msgid "Dismiss"
 msgstr ""
 
-#: functions.php:273
+#: functions.php:369
+msgid "Cyber Monday Sale"
+msgstr ""
+
+#: functions.php:371
+#, php-format
+msgid "<a href=\"%1$s\" target=\"_blank\"><i class=\"fas fa-terminal\"></i>Cyber Monday specials activated… <span class=\"otb-cursor\" aria-hidden=\"true\"></span></a>"
+msgstr ""
+
+#: functions.php:430
+msgid "Christmas Sale"
+msgstr ""
+
+#: functions.php:432
+#, php-format
+msgid "<a href=\"%1$s\" target=\"_blank\"><span style=\"font-size: 20px\">🎄</span>Get 20%% off any of our Premium WordPress themes until Christmas Day!<span style=\"font-size: 20px\">🎄</span></a>"
+msgstr ""
+
+#: functions.php:475
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:283
+#: functions.php:485
 msgid "Footer"
 msgstr ""
 
-#: functions.php:616
+#: functions.php:822
 msgid "Out of Stock"
 msgstr ""
 
-#: functions.php:738
+#: functions.php:944
 msgid "Elementor"
 msgstr ""
 
-#: functions.php:743
+#: functions.php:949
 msgid "SiteOrigin Widgets Bundle"
 msgstr ""
 
-#: functions.php:753
+#: functions.php:959
 msgid "Beam me up Scotty"
 msgstr ""
 
-#: functions.php:758
+#: functions.php:964
 msgid "WPForms"
 msgstr ""
 
-#: functions.php:763
+#: functions.php:969
 msgid "Breadcrumb NavXT"
 msgstr ""
 
@@ -593,11 +635,13 @@ msgstr ""
 msgid "Install Plugins"
 msgstr ""
 
+#. translators: %s: plugin name.
 #: library/includes/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
+#. translators: %s: plugin name.
 #: library/includes/class-tgm-plugin-activation.php:345
 #, php-format
 msgid "Updating Plugin: %s"
@@ -607,68 +651,67 @@ msgstr ""
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: library/includes/class-tgm-plugin-activation.php:349
+#. translators: 1: plugin name(s).
+#: library/includes/class-tgm-plugin-activation.php:348
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:355
+#. translators: 1: plugin name(s).
+#: library/includes/class-tgm-plugin-activation.php:354
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:361
+#. translators: 1: plugin name(s).
+#: library/includes/class-tgm-plugin-activation.php:360
 #, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to "
-"ensure maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to "
-"ensure maximum compatibility with this theme: %1$s."
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:367
+#. translators: 1: plugin name(s).
+#: library/includes/class-tgm-plugin-activation.php:366
 #, php-format
 msgid "There is an update available for: %1$s."
-msgid_plural ""
-"There are updates available for the following plugins: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:373
+#. translators: 1: plugin name(s).
+#: library/includes/class-tgm-plugin-activation.php:372
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural ""
-"The following required plugins are currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:379
+#. translators: 1: plugin name(s).
+#: library/includes/class-tgm-plugin-activation.php:378
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural ""
-"The following recommended plugins are currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:384
+#: library/includes/class-tgm-plugin-activation.php:383
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:389
+#: library/includes/class-tgm-plugin-activation.php:388
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/includes/class-tgm-plugin-activation.php:394
+#: library/includes/class-tgm-plugin-activation.php:393
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
@@ -688,30 +731,32 @@ msgid "Plugin activated successfully."
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:401
+#: library/includes/class-tgm-plugin-activation.php:3103
 msgid "The following plugin was activated successfully:"
-msgstr ""
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
 
+#. translators: 1: plugin name.
 #: library/includes/class-tgm-plugin-activation.php:403
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
+#. translators: 1: plugin name.
 #: library/includes/class-tgm-plugin-activation.php:405
 #, php-format
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
 msgstr ""
 
+#. translators: 1: dashboard link.
 #: library/includes/class-tgm-plugin-activation.php:407
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:409
-msgid ""
-"There are one or more required or recommended plugins to install, "
-"update or activate."
+msgid "There are one or more required or recommended plugins to install, update or activate."
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:410
@@ -731,22 +776,16 @@ msgid "Set the parent_slug config variable instead."
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:1042
-msgid ""
-"The remote plugin package does not contain a folder with the desired "
-"slug and renaming did not work."
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:1042
 #: library/includes/class-tgm-plugin-activation.php:1052
-msgid ""
-"Please contact the plugin provider and ask them to package their "
-"plugin according to the WordPress guidelines."
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:1052
-msgid ""
-"The remote plugin package consists of more than one file, but the "
-"files are not packaged in a folder."
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:1243
@@ -755,6 +794,7 @@ msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
+#. translators: %s: version number
 #: library/includes/class-tgm-plugin-activation.php:2112
 #, php-format
 msgid "TGMPA v%s"
@@ -804,12 +844,14 @@ msgstr ""
 msgid "Update recommended"
 msgstr ""
 
+#. translators: 1: install status, 2: update status
 #: library/includes/class-tgm-plugin-activation.php:2490
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr ""
 
+#. translators: 1: number of plugins.
 #: library/includes/class-tgm-plugin-activation.php:2536
 #, php-format
 msgctxt "plugins"
@@ -818,6 +860,7 @@ msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: number of plugins.
 #: library/includes/class-tgm-plugin-activation.php:2540
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
@@ -825,6 +868,7 @@ msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: number of plugins.
 #: library/includes/class-tgm-plugin-activation.php:2544
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
@@ -832,6 +876,7 @@ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: number of plugins.
 #: library/includes/class-tgm-plugin-activation.php:2548
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
@@ -876,16 +921,19 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
+#. translators: %2$s: plugin name in screen reader markup
 #: library/includes/class-tgm-plugin-activation.php:2751
 #, php-format
 msgid "Install %2$s"
 msgstr ""
 
+#. translators: %2$s: plugin name in screen reader markup
 #: library/includes/class-tgm-plugin-activation.php:2756
 #, php-format
 msgid "Update %2$s"
 msgstr ""
 
+#. translators: %2$s: plugin name in screen reader markup
 #: library/includes/class-tgm-plugin-activation.php:2762
 #, php-format
 msgid "Activate %2$s"
@@ -931,37 +979,33 @@ msgstr ""
 msgid "No plugins are available to be activated at this time."
 msgstr ""
 
-#: library/includes/class-tgm-plugin-activation.php:3103
-msgid "The following plugins were activated successfully:"
-msgid_plural "The following plugin was activated successfully:"
-msgstr[0] ""
-msgstr[1] ""
-
 #: library/includes/class-tgm-plugin-activation.php:3310
 msgid "Plugin activation failed."
 msgstr ""
 
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: library/includes/class-tgm-plugin-activation.php:3655
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#. translators: 1: plugin name, 2: error message.
 #: library/includes/class-tgm-plugin-activation.php:3658
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
+#. translators: 1: plugin name.
 #: library/includes/class-tgm-plugin-activation.php:3660
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:3664
-msgid ""
-"The installation and activation process is starting. This process may "
-"take a while on some hosts, so please be patient."
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
+#. translators: 1: plugin name.
 #: library/includes/class-tgm-plugin-activation.php:3666
 #, php-format
 msgid "%1$s installed and activated successfully."
@@ -971,17 +1015,17 @@ msgstr ""
 msgid "All installations and activations have been completed."
 msgstr ""
 
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: library/includes/class-tgm-plugin-activation.php:3669
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: library/includes/class-tgm-plugin-activation.php:3672
-msgid ""
-"The installation process is starting. This process may take a while on "
-"some hosts, so please be patient."
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
+#. translators: 1: plugin name.
 #: library/includes/class-tgm-plugin-activation.php:3674
 #, php-format
 msgid "%1$s installed successfully."
@@ -991,6 +1035,7 @@ msgstr ""
 msgid "All installations have been completed."
 msgstr ""
 
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: library/includes/class-tgm-plugin-activation.php:3677
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
@@ -1042,6 +1087,7 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
+#. translators: used between list items, there is a space after the comma
 #: library/includes/template-tags.php:112
 #: library/includes/template-tags.php:118
 msgid ", "
@@ -1114,11 +1160,10 @@ msgstr ""
 
 #: library/template-parts/content-none.php:18
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</"
-"a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
+#. translators: %s: Name of current post.
 #: library/template-parts/content-search.php:46
 #: library/template-parts/content.php:42
 #, php-format
@@ -1162,7 +1207,8 @@ msgctxt "placeholder"
 msgid "Search Products&hellip;"
 msgstr ""
 
-#: product-searchform.php:22 searchform.php:16
+#: product-searchform.php:22
+#: searchform.php:16
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
@@ -1172,9 +1218,22 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
+#. Template Name of the theme
+msgid "Full Width, No Bottom Margin"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Full Width"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Left Sidebar"
+msgstr ""
+
 #: trt-customize-pro/class-customize.php:76
 #: upgrade/library/template-parts/content-upgrade.php:4
-#: upgrade/upgrade.php:14 upgrade/upgrade.php:15
+#: upgrade/upgrade.php:14
+#: upgrade/upgrade.php:15
 msgid "Panoramic Premium"
 msgstr ""
 
@@ -1188,17 +1247,12 @@ msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:18
 #, php-format
-msgid ""
-"<strong>All settings for Panoramic</strong> are neatly built into the "
-"<a href=\"%s\">WordPress Customizer</a> allowing you to preview their "
-"effects before publishing them to your live site."
+msgid "<strong>All settings for Panoramic</strong> are neatly built into the <a href=\"%s\">WordPress Customizer</a> allowing you to preview their effects before publishing them to your live site."
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:21
 #, php-format
-msgid ""
-"<strong><a href=\"%s\" target=\"_blank\">Read a guide on how to "
-"install the Premium theme</a></strong>"
+msgid "<strong><a href=\"%s\" target=\"_blank\">Read a guide on how to install the Premium theme</a></strong>"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:30
@@ -1206,9 +1260,7 @@ msgid "Elementor Page Layouts"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:33
-msgid ""
-"Panoramic Premium offers a range of Elementor page layouts "
-"conveniently built into the theme."
+msgid "Panoramic Premium offers a range of Elementor page layouts conveniently built into the theme."
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:41
@@ -1216,9 +1268,7 @@ msgid "Panoramic Premium is a once off payment of $25"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:45
-msgid ""
-"View the Panoramic Premium demo and try out all the settings neatly "
-"built into the Customizer"
+msgid "View the Panoramic Premium demo and try out all the settings neatly built into the Customizer"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:49
@@ -1231,9 +1281,7 @@ msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:57
 #, php-format
-msgid ""
-"or learn more about <a href=\"%s\" target=\"_blank\">creating / "
-"editing a Child Theme</a>."
+msgid "or learn more about <a href=\"%s\" target=\"_blank\">creating / editing a Child Theme</a>."
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:61
@@ -1242,9 +1290,7 @@ msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:68
 #, php-format
-msgid ""
-"We have growing <a href=\"%s\" target=\"_blank\">documentation</a> to "
-"help you set up your website using Panoramic."
+msgid "We have growing <a href=\"%s\" target=\"_blank\">documentation</a> to help you set up your website using Panoramic."
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:72
@@ -1257,9 +1303,7 @@ msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:80
 #, php-format
-msgid ""
-"Please help by <a href=\"%s\" target=\"_blank\">giving us a rating on "
-"WordPress.org</a> :)"
+msgid "Please help by <a href=\"%s\" target=\"_blank\">giving us a rating on WordPress.org</a> :)"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:84
@@ -1268,28 +1312,20 @@ msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:89
 #, php-format
-msgid ""
-"Theme: Panoramic, built by <a href=\"%s\" target=\"_blank\">Out the "
-"Box</a>"
+msgid "Theme: Panoramic, built by <a href=\"%s\" target=\"_blank\">Out the Box</a>"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:98
-msgid ""
-"We aim to keep our prices lower than other theme shops while still "
-"offering you quality WordPress themes."
+msgid "We aim to keep our prices lower than other theme shops while still offering you quality WordPress themes."
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:100
-msgid ""
-"Upgrading will support us and enable us to keep building WordPress "
-"themes."
+msgid "Upgrading will support us and enable us to keep building WordPress themes."
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:102
 #, php-format
-msgid ""
-"If you're enjoying using Panoramic please let us know by <a href='%s' "
-"target='_blank'>giving us a rating</a>."
+msgid "If you're enjoying using Panoramic please let us know by <a href='%s' target='_blank'>giving us a rating</a>."
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:106
@@ -1301,9 +1337,7 @@ msgid "Ralf Neuser"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:121
-msgid ""
-"Panoramic is still my favorite theme. And thanks for your excellent "
-"support so far!"
+msgid "Panoramic is still my favorite theme. And thanks for your excellent support so far!"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:127
@@ -1319,7 +1353,5 @@ msgid "Peter Baker"
 msgstr ""
 
 #: upgrade/library/template-parts/content-upgrade.php:139
-msgid ""
-"I love the Panoramic theme and have just started using it on a second "
-"site."
+msgid "I love the Panoramic theme and have just started using it on a second site."
 msgstr ""

@@ -19,7 +19,16 @@ if ( function_exists( 'max_mega_menu_is_enabled' ) && max_mega_menu_is_enabled( 
 	}
 ?>
 <nav id="site-navigation" class="main-navigation border-bottom <?php echo ( $is_translucent ) ? sanitize_html_class( 'translucent' ) : sanitize_html_class( '' ); ?>" role="navigation">
-	<span class="header-menu-button" aria-expanded="false"><i class="<?php echo esc_attr( $font_awesome_code ); ?> <?php echo esc_attr( $font_awesome_icon_prefix ); ?>fa-bars"></i></span>
+	<span
+		class="header-menu-button"
+		role="button"
+		tabindex="0"
+		aria-expanded="false"
+		aria-controls="main-menu"
+		aria-label="<?php esc_attr_e( 'Navigation menu', 'panoramic' ); ?>"
+	>
+		<i class="<?php echo esc_attr( $font_awesome_code ); ?> <?php echo esc_attr( $font_awesome_icon_prefix ); ?>fa-bars"></i>
+	</span>
 	<div id="main-menu" class="main-menu-container panoramic-mobile-menu-standard-color-scheme">
 		<div class="main-menu-close"><i class="<?php echo esc_attr( $font_awesome_code ); ?> <?php echo esc_attr( $font_awesome_icon_prefix ); ?>fa-angle-right"></i><i class="<?php echo esc_attr( $font_awesome_code ); ?> <?php echo esc_attr( $font_awesome_icon_prefix ); ?>fa-angle-left"></i></div>
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'main-navigation-inner' ) ); ?>

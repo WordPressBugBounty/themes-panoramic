@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.89' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.90' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -823,6 +823,10 @@ if ( ! function_exists( 'panoramic_out_of_stock_notice' ) ) {
 			echo '</p>';
 	    }
 	}
+}
+
+if ( class_exists( 'WPO_WCPDF' ) && file_exists( get_template_directory() . '/library/includes/woocommerce-pdf-invoices.php' ) ) {
+	require get_template_directory() . '/library/includes/woocommerce-pdf-invoices.php';
 }
 
 function panoramic_excerpt_length( $length ) {

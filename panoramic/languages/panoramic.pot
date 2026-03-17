@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Panoramic 1.1.89\n"
+"Project-Id-Version: Panoramic 1.1.90\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/panoramic\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-19T08:53:55+02:00\n"
+"POT-Creation-Date: 2026-03-17T11:35:13+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: panoramic\n"
@@ -353,7 +353,7 @@ msgid "Use <h1></h1> or <h2></h2> tags around heading text and <p></p> tags arou
 msgstr ""
 
 #: customizer/customizer-options.php:394
-#: functions.php:974
+#: functions.php:978
 msgid "WooCommerce"
 msgstr ""
 
@@ -481,7 +481,7 @@ msgid "Read More Text"
 msgstr ""
 
 #: customizer/customizer-options.php:677
-#: functions.php:954
+#: functions.php:958
 msgid "Recent Posts Widget Extended"
 msgstr ""
 
@@ -603,23 +603,23 @@ msgstr ""
 msgid "Out of Stock"
 msgstr ""
 
-#: functions.php:944
+#: functions.php:948
 msgid "Elementor"
 msgstr ""
 
-#: functions.php:949
+#: functions.php:953
 msgid "SiteOrigin Widgets Bundle"
 msgstr ""
 
-#: functions.php:959
+#: functions.php:963
 msgid "Beam me up Scotty"
 msgstr ""
 
-#: functions.php:964
+#: functions.php:968
 msgid "WPForms"
 msgstr ""
 
-#: functions.php:969
+#: functions.php:973
 msgid "Breadcrumb NavXT"
 msgstr ""
 

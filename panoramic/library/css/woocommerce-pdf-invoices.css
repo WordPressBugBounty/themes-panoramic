@@ -56,3 +56,14 @@ h1.document-type-label {
     padding-top: 8px;
     border-top: 1px solid #e5e5e5;
 }
+
+/* ---------------------------------------
+ * Product meta enhancements
+ * --------------------------------------- */
+
+.otb-wcpdf-product-sku {
+    margin-top: 3px;
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 0.02em;
+}

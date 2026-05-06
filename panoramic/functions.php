@@ -4,7 +4,7 @@
  *
  * @package panoramic
  */
-define( 'PANORAMIC_THEME_VERSION' , '1.1.90' );
+define( 'PANORAMIC_THEME_VERSION' , '1.1.91' );
 
 if ( ! function_exists( 'panoramic_theme_setup' ) ) :
 /**
@@ -827,6 +827,23 @@ if ( ! function_exists( 'panoramic_out_of_stock_notice' ) ) {
 
 if ( class_exists( 'WPO_WCPDF' ) && file_exists( get_template_directory() . '/library/includes/woocommerce-pdf-invoices.php' ) ) {
 	require get_template_directory() . '/library/includes/woocommerce-pdf-invoices.php';
+}
+
+/**
+ * Display product SKU below invoice item meta.
+ */
+add_action( 'wpo_wcpdf_after_item_meta', 'otb_wcpdf_display_product_sku', 10, 3 );
+
+function otb_wcpdf_display_product_sku( $document_type, $item, $order ) {
+	if ( empty( $item['product'] ) || ! is_object( $item['product'] ) ) {
+		return;
+	}
+
+	$sku = $item['product']->get_sku();
+
+	if ( ! empty( $sku ) ) {
+		echo '<div class="otb-wcpdf-product-sku">' . esc_html__( 'SKU:', 'panoramic' ) . ' ' . esc_html( $sku ) . '</div>';
+	}
 }
 
 function panoramic_excerpt_length( $length ) {

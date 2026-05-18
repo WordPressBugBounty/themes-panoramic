@@ -67,3 +67,37 @@ h1.document-type-label {
     color: #666666;
     letter-spacing: 0.02em;
 }
+
+/* Improve invoice totals / order summary readability */
+.totals {
+    margin-top: 18px;
+    border-top: 2px solid #dcdcdc;
+    padding-top: 8px;
+}
+
+.totals th,
+.totals td {
+    padding: 5px 6px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.totals th {
+    font-weight: 600;
+    text-align: left;
+}
+
+.totals td {
+    text-align: right;
+}
+
+/* Make the final total stand out */
+.totals .total th,
+.totals .total td,
+.totals tr:last-child th,
+.totals tr:last-child td {
+    font-size: 13px;
+    font-weight: 700;
+    border-top: 1px solid #dcdcdc;
+    padding-top: 8px;
+}

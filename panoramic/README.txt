@@ -98,6 +98,9 @@ View the theme settings under "Appearance" -> Customize.
 
 == Changelog ==
 
+#### 1.1.93
+* New: Improved styling support for WooCommerce account pages
+
 #### 1.1.92
 * WordPress 7.0 compatibility update
 * New: Improved invoice totals and order summary styling for WooCommerce PDF Invoices & Packing Slips

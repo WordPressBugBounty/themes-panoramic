@@ -2,7 +2,7 @@
 Contributors: Out the Box
 Donate link: 
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready, wide-blocks, blog, e-commerce
-Tested up to: 7.0
+Tested up to: 7.1
 Requires at least: 4.7
 Requires PHP: 5.3
 Stable tag: 3.7
@@ -97,6 +97,12 @@ View the theme settings under "Appearance" -> Customize.
 1. Featured Images work best at a minimum of 1100 wide and 420 high.
 
 == Changelog ==
+
+#### 1.1.95
+* Fix: Corrected WordPress capitalization in composer.json to comply with theme review requirements
+
+#### 1.1.94
+* WordPress 7.1 compatibility update
 
 #### 1.1.93
 * New: Improved styling support for WooCommerce account pages
